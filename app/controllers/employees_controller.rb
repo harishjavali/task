@@ -3,7 +3,7 @@ class EmployeesController < ApplicationController
 
   # GET /employees or /employees.json
   def index
-    @employees = Employee.all
+    @employees = Employee.first(10)
   end
 
   # GET /employees/1 or /employees/1.json
@@ -60,11 +60,11 @@ class EmployeesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_employee
-      @employee = Employee.find(params[:id])
+      @employee = Employee.find(params[:emp_no])
     end
 
     # Only allow a list of trusted parameters through.
     def employee_params
-      params.fetch(:employee, {})
+      params.require(:employee).permit(:emp_no, :birth_date, :first_name, :last_name, :gender, :hire_date)
     end
 end
