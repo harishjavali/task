@@ -1,4 +1,4 @@
-# Bitsila Interview Assignment
+# Interview Assignment
 
 ## Problem statement: 
 ## Develop a simple Rails App using the above data and develop the APIs and write a simple UI that can show the below.
