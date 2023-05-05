@@ -1,13 +1,10 @@
 class Employee < ApplicationRecord
-#  def haha
-#     r = hello
-#     r.each do |result|
-#         puts "#{result.year}, #{result.count1}"
-#         # year = result.year
-#         # count = result.count1
-#         # Do something with the year and count
-#       end
-#  end
+ after_update :create_bg_info
+
+    def create_bg_info
+        BgInfo.create!(table_name: "Employee", table_id: emp_no)
+    end
+    
     def self.get_data
        Employee.select("YEAR(birth_date) AS year, COUNT(*) AS count1")
                       .group("year")
