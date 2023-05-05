@@ -1,4 +1,4 @@
-# Bitsila Inteview Assignment
+# Bitsila Interview Assignment
 
 ## Problem statement: 
 ## Develop a simple Rails App using the above data and develop the APIs and write a simple UI that can show the below.
@@ -20,7 +20,7 @@ Write these APIs to show the data as follows for the above dataset:
 - Maximum avg hike given to the employees by year
 
 
-## SOLUTION
+## Solution
 
 Things you may want to cover:
 
