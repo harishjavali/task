@@ -19,6 +19,10 @@ class EmployeesController < ApplicationController
   def edit
   end
 
+  def query_page
+    @hello = Employee.get_data
+  end
+
   # POST /employees or /employees.json
   def create
     @employee = Employee.new(employee_params)

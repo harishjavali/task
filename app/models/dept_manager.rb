@@ -1,0 +1,2 @@
+class DeptManager < ApplicationRecord
+end
