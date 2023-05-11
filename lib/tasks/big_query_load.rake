@@ -22,6 +22,7 @@ namespace :bigquery do
                         config.location = "US"
                     end
             end
+            BgInfo.delete_all
         end
     end
 end
